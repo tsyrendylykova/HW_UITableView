@@ -90,45 +90,49 @@
 -(void) fillArrayAnimalObjectsData {
     self.animalsObjects = [NSMutableArray new];
     
-    AnimalObject *catObject = [AnimalObject new];
-    catObject.animalImage = [UIImage imageNamed:@"cat"];
-    catObject.animalTitle = @"Cat";
-    catObject.animalDescription = @"Myu";
-    [self.animalsObjects addObject: catObject];
-    
-    AnimalObject *dogObject = [AnimalObject new];
-    dogObject.animalImage = [UIImage imageNamed:@"dog"];
-    dogObject.animalTitle = @"Dog";
-    dogObject.animalDescription = @"Gav-gav";
-    [self.animalsObjects addObject: dogObject];
-    
-    AnimalObject *giraffeObject = [AnimalObject new];
-    giraffeObject.animalImage = [UIImage imageNamed:@"giraffe"];
-    giraffeObject.animalTitle = @"Giraffe";
-    giraffeObject.animalDescription = @"Giraffe says something";
-    [self.animalsObjects addObject: giraffeObject];
+    for (int i = 0; i < 10; i++) {
+        AnimalObject *catObject = [AnimalObject new];
+        catObject.animalImage = [UIImage imageNamed:@"cat"];
+        catObject.animalTitle = @"Cat";
+        catObject.animalDescription = @"Myu";
+        [self.animalsObjects addObject: catObject];
+        
+        AnimalObject *dogObject = [AnimalObject new];
+        dogObject.animalImage = [UIImage imageNamed:@"dog"];
+        dogObject.animalTitle = @"Dog";
+        dogObject.animalDescription = @"Gav-gav";
+        [self.animalsObjects addObject: dogObject];
+        
+        AnimalObject *giraffeObject = [AnimalObject new];
+        giraffeObject.animalImage = [UIImage imageNamed:@"giraffe"];
+        giraffeObject.animalTitle = @"Giraffe";
+        giraffeObject.animalDescription = @"Giraffe says something";
+        [self.animalsObjects addObject: giraffeObject];
+    }
 }
 
 -(void) fillArrayBirdObjectsData {
     self.birdsObjects = [NSMutableArray new];
     
-    BirdObject *owlObject = [BirdObject new];
-    owlObject.birdImage = [UIImage imageNamed:@"sova"];
-    owlObject.birdTitle = @"Owl";
-    owlObject.birdDescription = @"Uhu - Uhu";
-    [self.birdsObjects addObject: owlObject];
-    
-    BirdObject *peacockObject = [BirdObject new];
-    peacockObject.birdImage = [UIImage imageNamed:@"pavlin"];
-    peacockObject.birdTitle = @"Peacock";
-    peacockObject.birdDescription = @"I dont know";
-    [self.birdsObjects addObject: peacockObject];
-    
-    BirdObject *eagleObject = [BirdObject new];
-    eagleObject.birdImage = [UIImage imageNamed:@"orel"];
-    eagleObject.birdTitle = @"Eagle";
-    eagleObject.birdDescription = @"Eagle says something";
-    [self.birdsObjects addObject: eagleObject];
+    for (int i = 0; i < 10; i++) {
+        BirdObject *owlObject = [BirdObject new];
+        owlObject.birdImage = [UIImage imageNamed:@"sova"];
+        owlObject.birdTitle = @"Owl";
+        owlObject.birdDescription = @"Uhu - Uhu";
+        [self.birdsObjects addObject: owlObject];
+        
+        BirdObject *peacockObject = [BirdObject new];
+        peacockObject.birdImage = [UIImage imageNamed:@"pavlin"];
+        peacockObject.birdTitle = @"Peacock";
+        peacockObject.birdDescription = @"I dont know";
+        [self.birdsObjects addObject: peacockObject];
+        
+        BirdObject *eagleObject = [BirdObject new];
+        eagleObject.birdImage = [UIImage imageNamed:@"orel"];
+        eagleObject.birdTitle = @"Eagle";
+        eagleObject.birdDescription = @"Eagle says something";
+        [self.birdsObjects addObject: eagleObject];
+    }
 }
 
 
