@@ -14,6 +14,8 @@
 		950CEF2C224142DF005E7750 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF2B224142DF005E7750 /* main.m */; };
 		950CEF3422415B50005E7750 /* AnimalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF3322415B50005E7750 /* AnimalTableViewCell.m */; };
 		950CEF3D2242E517005E7750 /* AnimalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF3C2242E517005E7750 /* AnimalObject.m */; };
+		950CEF4022438C1B005E7750 /* BirdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF3F22438C1B005E7750 /* BirdTableViewCell.m */; };
+		950CEF4322438C6B005E7750 /* BirdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF4222438C6B005E7750 /* BirdObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		950CEF3322415B50005E7750 /* AnimalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalTableViewCell.m; sourceTree = "<group>"; };
 		950CEF3B2242E517005E7750 /* AnimalObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalObject.h; sourceTree = "<group>"; };
 		950CEF3C2242E517005E7750 /* AnimalObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalObject.m; sourceTree = "<group>"; };
+		950CEF3E22438C1B005E7750 /* BirdTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdTableViewCell.h; sourceTree = "<group>"; };
+		950CEF3F22438C1B005E7750 /* BirdTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdTableViewCell.m; sourceTree = "<group>"; };
+		950CEF4122438C6B005E7750 /* BirdObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdObject.h; sourceTree = "<group>"; };
+		950CEF4222438C6B005E7750 /* BirdObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 				950CEF3322415B50005E7750 /* AnimalTableViewCell.m */,
 				950CEF3B2242E517005E7750 /* AnimalObject.h */,
 				950CEF3C2242E517005E7750 /* AnimalObject.m */,
+				950CEF3E22438C1B005E7750 /* BirdTableViewCell.h */,
+				950CEF3F22438C1B005E7750 /* BirdTableViewCell.m */,
+				950CEF4122438C6B005E7750 /* BirdObject.h */,
+				950CEF4222438C6B005E7750 /* BirdObject.m */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -148,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				950CEF3D2242E517005E7750 /* AnimalObject.m in Sources */,
+				950CEF4322438C6B005E7750 /* BirdObject.m in Sources */,
 				950CEF21224142DE005E7750 /* ViewController.m in Sources */,
+				950CEF4022438C1B005E7750 /* BirdTableViewCell.m in Sources */,
 				950CEF3422415B50005E7750 /* AnimalTableViewCell.m in Sources */,
 				950CEF2C224142DF005E7750 /* main.m in Sources */,
 				950CEF1E224142DE005E7750 /* AppDelegate.m in Sources */,

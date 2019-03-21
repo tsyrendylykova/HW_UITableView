@@ -11,7 +11,6 @@
 
 @interface AnimalTableViewCell ()
 
-
 @property (nonatomic, strong, readwrite) UIImageView *coverImageView;
 @property (nonatomic, strong) UILabel* titleLabel;
 @property (nonatomic, strong) UILabel* subtitleLabel;
