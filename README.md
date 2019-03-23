@@ -3,5 +3,5 @@
 ## Gallery of animals and birds
 
 <p>
-<img height="450" src="https://github.com/tsyrendylykova/HW_UITableView/blob/master/image_01.png">
+<img height="450" src="https://github.com/tsyrendylykova/HW_UITableView/blob/master/image01.png">
 <p>
