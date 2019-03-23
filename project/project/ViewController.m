@@ -36,7 +36,8 @@
 
     [self.tableView registerClass:[AnimalTableViewCell class] forCellReuseIdentifier:NSStringFromClass([AnimalTableViewCell class])];
     [self.tableView registerClass:[BirdTableViewCell class] forCellReuseIdentifier:NSStringFromClass([BirdTableViewCell class])];
-    self.tableView.rowHeight = 72.f;
+    //self.tableView.rowHeight = UITableViewAutomaticDimension;
+    //self.tableView.rowHeight = 72.f;
     
     [self fillArrayAnimalObjectsData];
     [self fillArrayBirdObjectsData];
@@ -100,7 +101,7 @@
         AnimalObject *dogObject = [AnimalObject new];
         dogObject.animalImage = [UIImage imageNamed:@"dog"];
         dogObject.animalTitle = @"Dog";
-        dogObject.animalDescription = @"Gav-gav";
+        dogObject.animalDescription = @"Экситон усиливает экранированный лазер. Тело изотропно масштабирует торсионный магнит. Солитон гомогенно нейтрализует плоскополяризованный погранслой, однозначно свидетельствуя о неустойчивости процесса в целом.";
         [self.animalsObjects addObject: dogObject];
         
         AnimalObject *giraffeObject = [AnimalObject new];
@@ -130,7 +131,7 @@
         BirdObject *eagleObject = [BirdObject new];
         eagleObject.birdImage = [UIImage imageNamed:@"orel"];
         eagleObject.birdTitle = @"Eagle";
-        eagleObject.birdDescription = @"Eagle says something";
+        eagleObject.birdDescription = @"Экситон усиливает экранированный лазер. Тело изотропно масштабирует торсионный магнит. Солитон гомогенно нейтрализует плоскополяризованный погранслой, однозначно свидетельствуя о неустойчивости процесса в целом.";
         [self.birdsObjects addObject: eagleObject];
     }
 }

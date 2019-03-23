@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AnimalTableViewCell : UITableViewCell
 
-- (void)layoutSubviews;
 - (void)setDataFromAnimalModel:(AnimalObject *)animal;
 
 @end
