@@ -19,8 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [UIWindow new];
-    UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:ViewController.new];
-    self.window.rootViewController = rootViewController;
+    ViewController *rootViewController = [ViewController new];
+    UINavigationController *rootNavigationViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    self.window.rootViewController = rootNavigationViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

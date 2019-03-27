@@ -11,6 +11,8 @@
 #import "BirdTableViewCell.h"
 #import "AnimalObject.h"
 #import "BirdObject.h"
+#import "project-Swift.h"
+
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -36,7 +38,6 @@
 
     [self.tableView registerClass:[AnimalTableViewCell class] forCellReuseIdentifier:NSStringFromClass([AnimalTableViewCell class])];
     [self.tableView registerClass:[BirdTableViewCell class] forCellReuseIdentifier:NSStringFromClass([BirdTableViewCell class])];
-    //self.tableView.rowHeight = UITableViewAutomaticDimension;
     //self.tableView.rowHeight = 72.f;
     
     [self fillArrayAnimalObjectsData];
@@ -72,21 +73,21 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *title = [NSString new];
-    if (indexPath.row % 2 == 0) {
-        title = self.animalsObjects[indexPath.row / 2].animalTitle;
-        
-    } else {
-        title = self.birdsObjects[indexPath.row / 2].birdTitle;
-    }
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:(UIAlertControllerStyleAlert)];
-    UIAlertAction *confirmActionButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [alertController dismissViewControllerAnimated:YES completion:nil];
-    }];
-    [alertController addAction:confirmActionButton];
-    [self presentViewController:alertController animated:YES completion:nil];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSString *title = [NSString new];
+//    if (indexPath.row % 2 == 0) {
+//        title = self.animalsObjects[indexPath.row / 2].animalTitle;
+//
+//    } else {
+//        title = self.birdsObjects[indexPath.row / 2].birdTitle;
+//    }
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+//    UIAlertAction *confirmActionButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [alertController dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    [alertController addAction:confirmActionButton];
+//    [self presentViewController:alertController animated:YES completion:nil];
+//}
 
 -(void) fillArrayAnimalObjectsData {
     self.animalsObjects = [NSMutableArray new];
@@ -134,8 +135,13 @@
         eagleObject.birdDescription = @"Экситон усиливает экранированный лазер. Тело изотропно масштабирует торсионный магнит. Солитон гомогенно нейтрализует плоскополяризованный погранслой, однозначно свидетельствуя о неустойчивости процесса в целом.";
         [self.birdsObjects addObject: eagleObject];
     }
+
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BirdViewController *birdsViewController = [BirdViewController new];
+    [self.navigationController pushViewController:birdsViewController animated:YES];
+}
 
 @end
