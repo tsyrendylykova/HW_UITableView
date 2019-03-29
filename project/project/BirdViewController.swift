@@ -15,7 +15,7 @@ open class BirdViewController: UIViewController {
     fileprivate lazy var collectionView: UICollectionView = {
         layout.delegate = self
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.init(red: 233/255, green: 235/255, blue: 232/255, alpha: 1)
         collectionView.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
         collectionView.dataSource = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
@@ -23,7 +23,21 @@ open class BirdViewController: UIViewController {
         return collectionView
     }()
     
-    fileprivate let dataSource: [String] = ["Воробей", "Павлин", "Орел", "Синица", "Воробей", "Павлин", "Воробей", "Павлин", "Орел", "Синица", "Воробей", "Павлин", "Воробей", "Павлин", "Орел", "Синица", "Воробей", "Павлин", "Воробей", "Павлин", "Орел", "Синица", "Воробей", "Павлин"]
+    var birdObjectCollection = BirdObjectCollection(label: "Воробей", image: UIImage(named: "pavlin2")!)
+    
+    fileprivate let dataSource: [BirdObjectCollection] = [
+        BirdObjectCollection(label: "Павлин", image: UIImage(named: "pavlin3")!),
+        BirdObjectCollection(label: "Воробей", image: UIImage(named: "vor")!),
+        BirdObjectCollection(label: "Орел", image: UIImage(named: "orel2")!),
+        BirdObjectCollection(label: "Попугай", image: UIImage(named: "pop")!),
+        BirdObjectCollection(label: "Павлин", image: UIImage(named: "pavlin3")!),
+        BirdObjectCollection(label: "Воробей", image: UIImage(named: "vor")!),
+        BirdObjectCollection(label: "Орел", image: UIImage(named: "orel2")!),
+        BirdObjectCollection(label: "Попугай", image: UIImage(named: "pop")!),
+        BirdObjectCollection(label: "Павлин", image: UIImage(named: "pavlin3")!),
+        BirdObjectCollection(label: "Воробей", image: UIImage(named: "vor")!),
+        BirdObjectCollection(label: "Орел", image: UIImage(named: "orel2")!)
+    ]
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +66,10 @@ extension BirdViewController: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let birdName = dataSource[indexPath.row]
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BirdCollectionViewCell", for: indexPath) as? BirdCollectionViewCell {
-            cell.titleLabel.text = birdName
-            cell.backgroundColor = UIColor.green
+            cell.titleLabel.text = dataSource[indexPath.row].label
+            cell.backgroundColor = UIColor.init(red: 219/255, green: 205/255, blue: 200/255, alpha: 0.8)
+            cell.birdImage.image = dataSource[indexPath.row].image
             cell.delegate = self
             cell.layer.masksToBounds = true
             cell.layer.cornerRadius = 6
@@ -78,14 +92,6 @@ extension BirdViewController: BirdCellDelegate {
 
 extension BirdViewController: BirdLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        if indexPath.row % 3 == 0 {
-            return 100
-        } else if indexPath.row % 5 == 0 {
-            return 170
-        } else if indexPath.row % 7 == 0 {
-            return 130
-        } else {
-            return 200
-        }
+        return dataSource[indexPath.item].image.size.height
     }
 }

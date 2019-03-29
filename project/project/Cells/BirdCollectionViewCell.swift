@@ -10,7 +10,20 @@ import UIKit
 
 final internal class BirdCollectionViewCell: UICollectionViewCell {
     
-    let titleLabel = UILabel()
+    let titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        return titleLabel
+    }()
+    let birdImage: UIImageView = {
+        let birdImage = UIImageView()
+        birdImage.translatesAutoresizingMaskIntoConstraints = false
+        birdImage.contentMode = .scaleAspectFill
+        birdImage.clipsToBounds = true
+        return birdImage
+    }()
+    
     weak var delegate: BirdCellDelegate?
     
     required init?(coder aDecoder: NSCoder) {
@@ -20,12 +33,12 @@ final internal class BirdCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(titleLabel)
+        self.addSubview(birdImage)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel.textAlignment = .center
-        titleLabel.frame = bounds
+        setupLayout()
     }
     
     func shakeIcons() {
@@ -40,5 +53,20 @@ final internal class BirdCollectionViewCell: UICollectionViewCell {
         shakeAnimation.timeOffset = 290 * drand48()
         
         self.layer.add(shakeAnimation, forKey:"shakeIcons")
+    }
+    
+    func setupLayout() {
+        
+        NSLayoutConstraint.activate([
+            birdImage.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 20),
+            birdImage.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 20),
+            birdImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -50),
+            birdImage.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -20),
+            
+            titleLabel.topAnchor.constraint(equalTo: birdImage.bottomAnchor),
+            titleLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 20),
+            titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
+            titleLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -20)
+            ])
     }
 }

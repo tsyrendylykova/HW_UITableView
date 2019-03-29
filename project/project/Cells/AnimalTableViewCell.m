@@ -45,14 +45,6 @@
     return self;
 }
 
-//- (void)layoutSubviews {
-//    [super layoutSubviews];
-//
-//    //self.coverImageView.frame = CGRectMake(16.f, 16.f, 40.f, 40.f);
-//    self.titleLabel.frame = CGRectMake(CGRectGetMaxX(self.coverImageView.frame) + 16.f, 16.f, CGRectGetWidth(self.frame) - 88.f, 16.f);
-//    self.subtitleLabel.frame = CGRectMake(CGRectGetMaxX(self.coverImageView.frame) + 16.f, CGRectGetMaxY(self.titleLabel.frame) + 8.f, CGRectGetWidth(self.frame) - 88.f, 16.f);
-//}
-
 - (void)setDataFromAnimalModel:(AnimalObject *)animal {
     [self.coverImageView setImage:animal.animalImage];
     self.titleLabel.text = animal.animalTitle;

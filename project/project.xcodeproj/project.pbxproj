@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		950CEF1E224142DE005E7750 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF1D224142DE005E7750 /* AppDelegate.m */; };
 		950CEF21224142DE005E7750 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF20224142DE005E7750 /* ViewController.m */; };
-		950CEF26224142DF005E7750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950CEF25224142DF005E7750 /* Assets.xcassets */; };
 		950CEF29224142DF005E7750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950CEF27224142DF005E7750 /* LaunchScreen.storyboard */; };
 		950CEF2C224142DF005E7750 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF2B224142DF005E7750 /* main.m */; };
 		950CEF3422415B50005E7750 /* AnimalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF3322415B50005E7750 /* AnimalTableViewCell.m */; };
@@ -20,7 +19,8 @@
 		950CEF6E2243F920005E7750 /* BirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF6D2243F920005E7750 /* BirdCollectionViewCell.swift */; };
 		950CEF70224405C4005E7750 /* BirdCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF6F224405C4005E7750 /* BirdCellDelegate.swift */; };
 		950CEF742248DFF0005E7750 /* BirdLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF732248DFF0005E7750 /* BirdLayout.swift */; };
-		950CEF7622492DCE005E7750 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950CEF7522492DCE005E7750 /* Photos.swift */; };
+		950CEFE0224EC190005E7750 /* BirdObjectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950CEFDF224EC190005E7750 /* BirdObjectCollection.swift */; };
+		950CEFE2224EC8EB005E7750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950CEFE1224EC8EB005E7750 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,6 @@
 		950CEF1D224142DE005E7750 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		950CEF1F224142DE005E7750 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		950CEF20224142DE005E7750 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		950CEF25224142DF005E7750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		950CEF28224142DF005E7750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		950CEF2A224142DF005E7750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		950CEF2B224142DF005E7750 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,7 +44,8 @@
 		950CEF6D2243F920005E7750 /* BirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCollectionViewCell.swift; sourceTree = "<group>"; };
 		950CEF6F224405C4005E7750 /* BirdCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCellDelegate.swift; sourceTree = "<group>"; };
 		950CEF732248DFF0005E7750 /* BirdLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdLayout.swift; sourceTree = "<group>"; };
-		950CEF7522492DCE005E7750 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		950CEFDF224EC190005E7750 /* BirdObjectCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdObjectCollection.swift; sourceTree = "<group>"; };
+		950CEFE1224EC8EB005E7750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +80,10 @@
 			children = (
 				950CEF722248DA18005E7750 /* Cells */,
 				950CEF1C224142DE005E7750 /* AppDelegate.h */,
+				950CEFE1224EC8EB005E7750 /* Assets.xcassets */,
 				950CEF1D224142DE005E7750 /* AppDelegate.m */,
 				950CEF1F224142DE005E7750 /* ViewController.h */,
 				950CEF20224142DE005E7750 /* ViewController.m */,
-				950CEF25224142DF005E7750 /* Assets.xcassets */,
 				950CEF27224142DF005E7750 /* LaunchScreen.storyboard */,
 				950CEF2A224142DF005E7750 /* Info.plist */,
 				950CEF2B224142DF005E7750 /* main.m */,
@@ -94,7 +94,7 @@
 				950CEF692243EE5C005E7750 /* BirdViewController.swift */,
 				950CEF6F224405C4005E7750 /* BirdCellDelegate.swift */,
 				950CEF732248DFF0005E7750 /* BirdLayout.swift */,
-				950CEF7522492DCE005E7750 /* Photos.swift */,
+				950CEFDF224EC190005E7750 /* BirdObjectCollection.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -169,8 +169,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950CEFE2224EC8EB005E7750 /* Assets.xcassets in Resources */,
 				950CEF29224142DF005E7750 /* LaunchScreen.storyboard in Resources */,
-				950CEF26224142DF005E7750 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,12 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950CEF7622492DCE005E7750 /* Photos.swift in Sources */,
 				950CEF3D2242E517005E7750 /* AnimalObject.m in Sources */,
 				950CEF4322438C6B005E7750 /* BirdObject.m in Sources */,
 				950CEF21224142DE005E7750 /* ViewController.m in Sources */,
 				950CEF6A2243EE5C005E7750 /* BirdViewController.swift in Sources */,
 				950CEF4022438C1B005E7750 /* BirdTableViewCell.m in Sources */,
+				950CEFE0224EC190005E7750 /* BirdObjectCollection.swift in Sources */,
 				950CEF70224405C4005E7750 /* BirdCellDelegate.swift in Sources */,
 				950CEF3422415B50005E7750 /* AnimalTableViewCell.m in Sources */,
 				950CEF742248DFF0005E7750 /* BirdLayout.swift in Sources */,
